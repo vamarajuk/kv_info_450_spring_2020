@@ -25,9 +25,9 @@ int main()
 
 char get_user_input()
 {
-	char user_input_letter;
-	cin >>  user_input_letter; 
-	return user_input_letter;
+	char user_letter;
+	cin >>  user_letter; 
+	return user_letter;
 }
 
 void to_upper_case(char &letter)
