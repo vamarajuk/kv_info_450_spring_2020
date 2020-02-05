@@ -13,7 +13,7 @@ int main()
 	cin >> radius;
 	double cir = calculateCircumference(radius);
 
-	cout << "The circumference of a a circle with the radius " << radius << "is " << cir << endl;
+	cout << "The circumference of a circle with the radius " << radius << "is " << cir << endl;
 
 	
 
