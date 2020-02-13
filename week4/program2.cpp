@@ -29,7 +29,7 @@ int main()
 			
 			cout << "enter name" << endl;
 			cin.getline(roster[i], COL);
-			if (roster[i] == " ")
+			if (roster[i] == "\0")
 			{
 				print = true;
 				cout << "check";
@@ -48,6 +48,6 @@ int main()
 
 
 
-	system("pause");
+	
 	return 0;
 }
