@@ -21,14 +21,16 @@ int main()
 		}
 	}*/
 
+	
 	while (print == false)
 	{
-		
+		//for loop for inputing names
 		for (int i = 0; i < ROW; i++)
 		{
 			
 			cout << "enter name" << endl;
 			cin.getline(roster[i], COL);
+			//if statement to detect empty string
 			if (roster[i] == "\0")
 			{
 				print = true;
@@ -38,6 +40,8 @@ int main()
 		}
 	} 
 
+	
+	//prints names after program registers empty string
 	if (print == true)
 	{
 		for (int i = 0; i < ROW; i++)
