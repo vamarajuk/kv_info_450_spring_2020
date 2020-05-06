@@ -13,7 +13,7 @@ private:
     int last10checks[10] = { -1,-1,-1,-1,-1,-1,-1,-1,-1,-1 };
     //-1 used as validation num, here representing an empty index
     //program can use this to find empty spaces
-
+    
 
 public:
     void WriteCheck(int checknum, double amount);

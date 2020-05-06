@@ -2,11 +2,11 @@
 default: build
 	
 exam.o: 
-	g++ -c Account.cpp Savings.cpp creditCard.cpp checking.cpp 
+	g++ -c main.cpp Account.cpp Savings.cpp creditCard.cpp checking.cpp 
  
 
 build:exam.o
-	g++ -o exam main.cpp exam.o
+	g++ -o exam  *.o
 
 clean: 
-	rm -f exam.o exam
+	rm -f *.o exam

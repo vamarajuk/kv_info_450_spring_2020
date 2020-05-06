@@ -27,6 +27,7 @@ void Checking::WriteCheck(int checknum, double amount)
             if (Checking::last10checks[i] == -1)
             {
                 Checking::last10checks[i] = checknum;
+                break;
             }
         }
     }
@@ -70,9 +71,14 @@ Checking::Checking(string name, long taxID, double balance)
 
 void Checking::Display()
 {
+    //display last 10 checks, then num of deposits
     cout << "Last 10 Checks for : " << Checking::GetName() << endl;
     for (int i = 0; i < 10; i++)
     {
+        if(Checking::last10checks[i] != -1)
+        { 
         cout << "Charge " << i + 1 << ": " << Checking::last10checks[i] << endl;
+        }
     }
+    cout << "Number of Deposits for Checking: " << Checking::numDeposits << endl;
 }

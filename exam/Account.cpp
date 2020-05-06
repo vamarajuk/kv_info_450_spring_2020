@@ -38,29 +38,7 @@ void Account::SetTaxID(long id)
 {
     
     Account::balance = bal1;
-    /*
-        if(bal<0)
-        {
-            cout << "Cannot enter negative balance." << endl;
-
-        }
-        else if(bal==0 || !bal)
-        {
-            cout << "enter Account Balance." << endl;
-            string temp;
-            string::size_type sz;
-            getline(cin,temp);
-            Account::balance = std::stod(temp,&sz);
-            Account::balance = bal;
-
-        }
-        else
-        {
-            Account::balance = bal;
-        }
-
-
-    */
+    
 }
 
 void Account::MakeDeposit(double amount)
@@ -68,6 +46,8 @@ void Account::MakeDeposit(double amount)
     double temp = Account::GetBalance();
     temp = temp + amount;
     Account::SetBalance(temp);
+
+    Account::numDeposits = Account::numDeposits +1;
 
 }
 

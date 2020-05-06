@@ -13,7 +13,7 @@ void Savings::DoWithdraw(double amount)
 
 
     //list as withdraw
-    Savings::numWithdraws = +1;
+    Savings::numWithdraws = Savings::numWithdraws +1;
 }
 
 Savings::Savings()
@@ -32,6 +32,7 @@ Savings::Savings(string name, long TaxID, double balance)
 
 void Savings::Display() 
 { 
+    //printing deposit and withdrawal records
     cout << "number of deposits: " << Savings::numDeposits << endl;
     cout << "number of withdrawals: " << Savings::numWithdraws << endl;
 };

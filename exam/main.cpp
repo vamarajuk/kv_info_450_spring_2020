@@ -10,9 +10,9 @@ using namespace std;
 int main()
 {
 
-    Checking ck("ck",0, 100 );
-    CreditCard cc("cc", 0, 100);
-    Savings ss("ss", 0, 100);
+    Checking ck("checking",0, 100 );
+    CreditCard cc("credit card", 1337, 100);
+    Savings ss("savings", 0, 100);
 
     int menu_sel = -1;
     int input_i = 0;
@@ -21,14 +21,16 @@ int main()
     long input_L = 0;
     char input_c[100];
 
+    
+    
     while (menu_sel != 0)
     {
         
         //print menu
         
-        cout << "Checking balance: $" << ck.GetBalance() << " ";
-        cout << "Savings balance: $" << ss.GetBalance() << " ";
-        cout << "Credit Card balance: $" << cc.GetBalance() << " " << endl;
+        cout << "Checking balance: $" << ck.GetBalance() << "\t";
+        cout << "Savings balance: $" << ss.GetBalance() << "\t";
+        cout << "Credit Card balance: $" << cc.GetBalance() << endl;
 
         cout << "1. Savings Deposit" << endl;
         cout << "2. Savings Withdrawal" << endl;
@@ -65,8 +67,9 @@ int main()
             ck.MakeDeposit(input_d);
             break;
         case 4:
-            cout << "Enter Check number, then enter Check amount" << endl;
+            cout << "Enter Check number" << endl;
             cin >> input_i;
+            cout << "Enter check amount" << endl;
             cin >> input_d;
             ck.WriteCheck(input_i, input_d);
             break;
@@ -76,11 +79,11 @@ int main()
             cc.MakePayment(input_d);
             break;
         case 6:
-            cout << "Enter Name of charge, then enter amount" << endl;
-            //std::getline(cin, input_s);
-            cin.getline(input_c, 100);
+            cout << "Enter Name of charge followed by a period. Example 'electric bill.' " << endl;
+            std::getline(cin, input_s, '.');
+            cout << "enter amount of charge" << endl;
             cin >> input_d;
-            cc.DoCharge(input_c, input_d);
+            cc.DoCharge(input_s, input_d);
             break;
         case 7:
             ss.Display();

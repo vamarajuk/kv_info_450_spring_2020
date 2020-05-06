@@ -23,6 +23,7 @@ void CreditCard::DoCharge(string name, double amount)
             if (CreditCard::last10charges[i] == "-1")
             {
                 CreditCard::last10charges[i] = name;
+                break;
             }
         }
     }
@@ -71,10 +72,13 @@ void CreditCard::Display()
     cout << "List of last 10 charges for " << CreditCard::GetName() << endl;
     for (int i = 0; i < 10; i++)
     {
+        if(CreditCard::last10charges[i] != "-1")
+        {
         cout << "Charge " << i + 1 << ": " << CreditCard::last10charges[i] << endl;
-
+        }
     }
 
-    //list deposit record?
+    //list deposit record
+    cout << "Number of Payments for Credit Card: " << CreditCard::numDeposits << endl;
 
 }
