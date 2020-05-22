@@ -11,20 +11,7 @@ int main()
 	
 	while (input != 0)
 	{
-		//This block of code doesn't recognize that 1800 and 1900 aren't leap years
-		//and i don't know why. 
-		/*if (input % 100 == 0 && input % 400 == 0 || input % 4 == 0)
-		{
-			cout << input << " is a leap year." << endl;
-			cout << "Enter year to check. enter 0 to exit. " << endl;
-			cin >> input;
-		}
-		else
-		{
-			cout << input << " is not a leap year." << endl;
-			cout << "Enter year to check. enter 0 to exit. " << endl;
-			cin >> input;
-		}*/
+		
 
 		if (input % 100 == 0)
 		{
