@@ -51,11 +51,7 @@ string reverse(string *s1)
 	string s2(temp2);
 	
 
-	/*for (unsigned i = 0; i < s1->length(); ++i)
-	{
-		s2.insert(0, s1[i]);
-		cout << i << endl;
-	}*/
+	
 
 	return s2;
 }
