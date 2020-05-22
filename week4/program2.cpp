@@ -10,16 +10,7 @@ int main()
 	char roster[ROW][COL];
 	bool print = false;
 	
-	/*for (int i = 0; i < ROW; i++)
-	{
-		cout << "enter name" << endl;
-		cin.getline(roster[i], COL);
-		if (roster[i] == " ")
-		{
-			print = true;
-			break;
-		}
-	}*/
+	
 
 	
 	while (print == false)
